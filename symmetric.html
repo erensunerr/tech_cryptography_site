@@ -1,0 +1,45 @@
+<html>
+<head>
+ <link rel="stylesheet" type="text/css" href="symmetric.css">
+ <link rel="stylesheet" type="text/css" href="navBar.css">
+  <script src="navBar.js"></script>
+  <script src="symmetric.js"></script>
+</head>
+<body>
+<div id="NavBar">
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="symmetric.html">Symmetric Ciphers</a></li>
+  <li><a href="hashing.html">Hashing</a></li>
+  <li><a href="asymmetric.html">Asymmetric Ciphers</a></li>
+</ul>
+</div>
+<div id="Title">
+<h1>Symmetric Ciphers</h1>
+</div>
+<div id="info">
+In a symmetric cipher decryption key is the same as (or can be easily derived from) the encryption key.
+</div>
+<br><br>
+<div id="caesar" class="example">
+<h2>Caesar's Cipher</h2>
+<p>Is a substitution cipher, to encrypt a letter you shift it a certain number of places down the alphabet
+. The key is the number of places you shifted.</p>
+<canvas id="caesar_animation_1" width="1040" height="60"></canvas>
+<canvas id="caesar_animation_2" width="1040" height="60"></canvas>
+<p><form>
+  Key: <input type="text" id="key" name="fname"><br>
+  <button type="button"  onclick="key_change()">Key Change</button>
+</form>
+<textarea rows="4" cols="50" id="textarea_encrypt" placeholder="Write the text you want to encrypt here.">
+</textarea>
+<button type="button" onclick="encrypt()">Encrypt</button>
+<textarea id= "textarea_decrypt" rows="4" cols="50" placeholder="Write the text you want to decrypt here.">
+</textarea>
+<button type="button" onclick="decrypt()">Decrypt</button>
+</p>
+</div>
+<script type="text/javascript">navBar()</script>
+<script type="text/javascript">draw_crypto_picker()</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+#navBar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+* {
+	font: Courier;
+}
+
+#navBar  li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#navBar  li {
+	 float: left;
+	 
+}
+li a:hover {
+	background-color: #4f554e;
+}
+
+#Title {
+	text-align: center;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#info {
+	margin-left: 1%;
+	
+}
+
+.example {
+	margin-left: 1%;
+}
+
