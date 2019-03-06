@@ -46,7 +46,7 @@ function key_change(){
 	var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	key = parseInt(document.getElementById("key").value, 10);
 	var canvas = document.getElementById("caesar_animation_2");
-	var a = 26-key
+	var a = (26-key) % 26
 	var part_1 = alphabet.slice(0,a);
 	var part_2 = alphabet.slice(a, 26);
 	alphabet = part_2 + part_1

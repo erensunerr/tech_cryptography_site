@@ -39,6 +39,23 @@ In a symmetric cipher decryption key is the same as (or can be easily derived fr
 <button type="button" onclick="decrypt()">Decrypt</button>
 </p>
 </div>
+<div id="one_time_pad" class="example">
+<h2>One Time Pad</h2>
+<p>TODO: FILL THIS</p>
+<canvas id="onetime_1" width="1040" height="60"></canvas>
+<canvas id="onetime_2" width="1040" height="60"></canvas>
+<p><form>
+  Key: <input type="text" id="key" name="fname"><br>
+  <button type="button"  onclick="key_change()">Key Change</button>
+</form>
+<textarea rows="4" cols="50" id="textarea_encrypt_onetime" placeholder="Write the text you want to encrypt here.">
+</textarea>
+<button type="button" onclick="encrypt()">Encrypt</button>
+<textarea id= "textarea_decrypt_onetime" rows="4" cols="50" placeholder="Write the text you want to decrypt here.">
+</textarea>
+<button type="button" onclick="decrypt()">Decrypt</button>
+</p>
+</div>
 <script type="text/javascript">navBar()</script>
 <script type="text/javascript">draw_crypto_picker()</script>
 </body>
