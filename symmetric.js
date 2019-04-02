@@ -96,3 +96,38 @@ function decrypt(){
 	});
 	document.getElementById("textarea_decrypt").value = decrypted;
 }
+
+function encrypt_pad(){
+	var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ .?";
+	var txt = document.getElementById("textarea_encrypt_onetime").value
+	var pad = document.getElementById("textarea_pad_onetime").value
+	var encrypted = "";
+	txt.split('').forEach(function (c){
+		var q = c;
+		c = c.toUpperCase();
+		
+		var alp_index = alphabet.indexOf(c);
+		var alp_index_pad = alphabet.indexOf(pad[txt.indexOf(q)].toUpperCase());
+		var index = (alp_index + alp_index_pad) % 29;
+		console.log(alp_index,alp_index_pad, index);
+		encrypted += alphabet[index];
+	});
+	document.getElementById("textarea_encrypt_onetime").value = encrypted;
+}
+
+function decrypt_pad(){
+	var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ .?";
+	var txt = document.getElementById("textarea_decrypt_onetime").value
+	var pad = document.getElementById("textarea_pad_onetime").value
+	var decrypted = "";
+	txt.split('').forEach(function (c){
+		var q = c;
+		c = c.toUpperCase();
+		var alp_index = alphabet.indexOf(c);
+		var alp_index_pad = alphabet.indexOf(pad[txt.indexOf(q)].toUpperCase());
+		var index = (alp_index - alp_index_pad) % 29;
+		console.log(alp_index,alp_index_pad, index);
+		decrypted += alphabet[index];
+	});
+	document.getElementById("textarea_decrypt_onetime").value = decrypted;
+}
